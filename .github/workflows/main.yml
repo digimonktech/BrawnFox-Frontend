@@ -1,0 +1,31 @@
+name: CI/CD
+
+on:
+  push:
+    branches: ["html"]
+
+jobs:
+  BrawnFox:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+
+        uses: actions/checkout@v3
+
+      - name: Deployment
+
+        uses: appleboy/ssh-action@master
+
+        with:
+          host: 203.190.153.19
+
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+          username: devops
+
+          port: 22
+
+          script: |
+            cd /var/www/html/brawnfox/html/
+            git pull origin html
