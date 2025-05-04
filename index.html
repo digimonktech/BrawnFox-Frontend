@@ -4,7 +4,8 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +13,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -20,7 +21,7 @@
 <body>
 
   <div class="main-section">
-    <div class="container-xxl">
+    <div class="page-width">
       <div class="banner-section">
         <div class="navbar-section">
           <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
@@ -30,7 +31,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" /></a>
+              <a class="navbar-brand logo" href="#"><img src="images/logo.png" alt="" style="width:60px" /></a>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 custom-menu-list">
@@ -53,8 +54,8 @@
                     <a class="nav-link" href="#">Contact Us</a>
                   </li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2 custom-search" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex gap-3">
+                  <input class="form-control custom-search" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-cart" type="button">
                     <img src="images/cart.png" alt="" />
                     <span class="dot"></span>
@@ -65,62 +66,89 @@
           </nav>
         </div>
         <div class="banner">
-          <button class="btn-rotate">
-            
+          <!-- <button class="btn-rotate">
+
             <div class="rotate-wrapper" onclick="rotateOnce()">
-              <svg id="rotateIcon" width="32px" height="32px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                
-                <!-- Static text/center -->
+              <svg id="rotateIcon" width="32px" height="32px" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+
+
                 <g class="center-static">
-                  <path d="M12.1601 18.6187C12.5168 18.9755 13.0111 19.1973 13.5559 19.1973C14.6456 19.1973 15.5291 18.3151 15.5291 17.2254C15.5291 16.1358 14.6456 15.2523 13.5559 15.2523L15.5343 12.8018H12.0913"
+                  <path
+                    d="M12.1601 18.6187C12.5168 18.9755 13.0111 19.1973 13.5559 19.1973C14.6456 19.1973 15.5291 18.3151 15.5291 17.2254C15.5291 16.1358 14.6456 15.2523 13.5559 15.2523L15.5343 12.8018H12.0913"
                     stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M20.0142 19.1973H18.9478V12.8018H20.0142C21.7798 12.8018 23.2119 14.2326 23.2119 15.9995C23.2119 17.7651 21.7798 19.1973 20.0142 19.1973Z"
                     stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </g>
-          
-                <!-- Rotating outer orbit -->
+
+
                 <g id="rotatable" class="outer-rotate">
                   <path d="M29.0786 8.068L25.5682 7.36747L24.8716 10.8584" stroke="black" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M5.11186 23.5725L8.59892 24.3794L9.40186 20.9105" stroke="black" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M25.5327 7.58425C30.1406 12.0715 30.3326 19.4413 25.9219 24.1634C23.1587 27.1225 19.237 28.3484 15.5152 27.7983"
+                  <path
+                    d="M25.5327 7.58425C30.1406 12.0715 30.3326 19.4413 25.9219 24.1634C23.1587 27.1225 19.237 28.3484 15.5152 27.7983"
                     stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M8.64158 24.1606C4.17118 19.5372 4.20225 12.1635 8.75438 7.57626C11.6058 4.70412 15.5625 3.59626 19.2661 4.25919"
+                  <path
+                    d="M8.64158 24.1606C4.17118 19.5372 4.20225 12.1635 8.75438 7.57626C11.6058 4.70412 15.5625 3.59626 19.2661 4.25919"
                     stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </g>
               </svg>
-            <span>Guidelines</span>
-          </button>
-          <h1>Designed By You, Perfected By Brawn & Fox</h1>
-          <p>Craft your signature hat in 10 simple steps.</p>
+              <span>Guidelines</span>
+          </button> -->
+          <div class="middle-text">
+            <h1>Designed By You, Perfected By Brawn & Fox</h1>
+            <p>Craft your signature hat in 10 simple steps.</p>
+          </div>
           <button class="btn-start">Start Designing <svg width="11" height="17" viewBox="0 0 11 17" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M2 15.25L9 8.25L2 1.25" stroke="white" stroke-width="1.5" stroke-linecap="square" />
             </svg></button>
-         
-<div class="banner-shadow">
-  <img src="./images/hat-3.png"/>
-</div>
-<div class="banner-shadow-right">
-  <img src="./images/hat-4.png"/>
-</div>
-  <img src="./images/hat-1.png" alt="" class="left-banner-cap"/>
-  <img src="./images/hat.png" alt="" class="right-banner-cap"/>
+
+          <div class="banner-shadow">
+            <img src="./images/hat-3.png" />
+          </div>
+          <div class="banner-shadow-right">
+            <img src="./images/hat-4.png" />
+          </div>
+          <img src="./images/hat-1.png" alt="" class="left-banner-cap" />
+          <img src="./images/hat.png" alt="" class="right-banner-cap" />
 
 
         </div>
-        
+
       </div>
     </div>
   </div>
   <div class="content-section">
-    <div class="container-xxl">
+    <div class="page-width">
       <div class="card-content">
-        <div class="content-card">
-          <div class="card-tast" data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom">
+        <section class="section is-better" data-module="Zoom" zoom-pc="in out" zoom-mob="out">
+          <div class="content-card zoom-on-scroll">
+            <div class="card-tast">
+              <h1>
+                Every<br />
+                Detail<br />Matters
+              </h1>
+              <div class="content-text">
+                From concept to completion, every step of the process is built for ease, precision, and customization.
+                Our 3D customizer puts the creative process in your hands—allowing you to bring your vision to life
+                effortlessly. Start designing today and craft a hat that represents your brand with style and
+                distinction.
+              </div>
+            </div>
+            <div class="cap-1">
+              <div class="hat">
+                <img alt="Hat image" src="./images/hat.png" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- <div class="content-card">
+          <div class="card-tast">
             <h1><span class="your-test">Your Taste,</span><br />
               <span>Your Hat,<br />
                 Your Brand!</span>
@@ -131,32 +159,26 @@
             </div>
           </div>
           <div class="cap-1">
-            <div class="hat" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
+            <div class="hat">
               <img alt="" src="./images/hat.png" />
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="secound-section">
           <div class="titlecard">
-            <h1 data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
+            <h1 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
               Design Your
             </h1>
-            <h1 data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
+            <h1 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
               Hat Basics
             </h1>
-            <div class="content-text" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
+            <div class="content-text" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             </div>
-            <div class="cardbox-details" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
-              <div class="row">
-                <div class="col-xl-4"  data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom">
+            <div class="cardbox-details" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+              <div class="design-story">
+                <div class="our-design-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                   <div class="card-1">
                     <span class="count">1</span>
                     <div class="card-one">
@@ -170,31 +192,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-4" data-aos="fade-up"
-                data-aos-anchor-placement="center-bottom">
+                <div class="our-design-card" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                   <div class="card-1" style="background: linear-gradient(323.73deg, #FFCFD0 1.04%, #E65862 114.42%);">
                     <span class="count">2</span>
                     <div class="card-one">
-                      <img alt="" src="./images/cap-2.png" style="margin-top: -50px;" />
+                      <img alt="" src="./images/cap-2.png" />
                     </div>
-                    <div class="text-des">
+                    <div class="text-des mt-1">
                       <h3>Choose a Rope Style</h3>
                       <p>A rope detail can add a touch of personality. Opt for a clean, rope-free look, or select from a
                         variety of styles and colors to create subtle contrast or a bold accent.</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-3" data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
+                <div class="our-design-card-3" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                   <div class="card-1"
                     style="background: linear-gradient(326.22deg, rgba(206, 209, 237, 0.2) 26.82%, #707492 150.87%);">
                     <span class="count">3</span>
                     <div class="card-one" style="text-align: right;">
                       <img alt="" src="./images/cap-3.png" style="margin-top: 0px;" />
                     </div>
-                    <div class="text-des">
-                      <h3 class="mb-3">Choose a Backstrap Color</h3>
-                      <p>More than functional, the backstrap adds style. Match your crown or choose a bold contrast.</p>
+                    <div class="text-des our-top-3">
+                      <h3>Choose a Backstrap Color</h3>
+                      <p>More than functional, the backstrap adds style. Match your crown or choose a bold contrast—it
+                        keeps your hat cohesive from every angle.</p>
                     </div>
                   </div>
                 </div>
@@ -203,21 +224,20 @@
           </div>
 
         </div>
-        <div class="secound-section mt-200">
-          <div class="titlecard" data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom">
+        <div class="secound-section mt-100">
+          <div class="titlecard" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <h1>Customize</h1>
             <h1>Your Patch</h1>
             <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </div>
           </div>
-          <div class="row mt-100">
-            <div class="col-xl-6" data-aos="fade-up">
+          <div class="our-patch-section mt-100">
+            <div class="our-patch-card" data-aos="fade-up">
               <div class="card-1" style="background: linear-gradient(304.13deg, rgba(225, 243, 255, 0.2) 38.51%, #9BB8CB 124.01%);
 ">
                 <span class="count">4</span>
                 <div class="card-one">
-                  <img alt="" src="./images/cap-4.png" style="margin-top:-55px" />
+                  <img alt="" src="./images/cap-4.png" style="margin-top:-32px; width:auto;" />
                 </div>
                 <div class="text-des">
                   <h3>Select a Patch Type & Shape</h3>
@@ -227,14 +247,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6" data-aos="fade-down">
+            <div class="our-patch-card" data-aos="fade-down">
               <div class="card-1" style="background: linear-gradient(0.74deg, #F6FFFD 49.76%, #8BBAB1 131.26%);">
                 <span class="count">5</span>
                 <div class="card-one text-end">
-                  <img alt="" src="./images/cap-5.png" style="margin-top:-0px" />
+                  <img alt="" src="./images/cap-5.png" style="margin-top:0px; width:308px;" />
                 </div>
                 <div class="text-des">
-                  <h3>Select an Outline
+                  <h3>Select an Outline <br />
                     Patch Color</h3>
                   <p>The outline frames your patch, enhancing its definition and contrast. Whether you prefer a subtle
                     border that blends in or a bold outline that makes a statement, this step ensures the patch stands
@@ -244,20 +264,21 @@
             </div>
           </div>
         </div>
-        <div class="secound-section mt-200">
+        <div class="secound-section mt-100">
           <div class="titlecard" data-aos="fade-top">
             <h1>Your Brand, Your Hat</h1>
 
             <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </div>
           </div>
-          <div class="row mt-100">
-            <div class="col-xl-5" data-aos="fade-down">
+          <div class="our-brand-section mt-100">
+            <div class="our-brand-card" data-aos="fade-down">
               <div class="card-1" style="background: linear-gradient(63.32deg, rgba(248, 197, 129, 0.2) -23.04%, #F8C581 122.62%);
+
 ">
                 <span class="count">6</span>
                 <div class="card-one">
-                  <img alt="" src="./images/cap-6.png" style="margin-top:-15px" />
+                  <img alt="" src="./images/cap-6.png" style="margin-top:-35px" />
                 </div>
                 <div class="text-des">
                   <h3>Choose an Inline Patch Color</h3>
@@ -266,14 +287,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-4" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
+            <div class="our-brand-card-1" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
               <div class="card-1" style="background: #F7F7F7;">
                 <span class="count">7</span>
                 <div class="card-one">
                   <img alt="" src="./images/upload.png" style="margin-top:-30px" />
                 </div>
-                <div class="text-des">
+                <div class="text-des mt-58">
                   <h3>Upload Your Logo</h3>
                   <p>This is where your design comes to life. Upload your brand’s logo and get a real-time preview of
                     how it will look on the finished product.</p>
@@ -282,14 +302,14 @@
             </div>
           </div>
         </div>
-        <div class="secound-section mt-200">
-          <div class="row">
-            <div class="col-xl-6" data-aos="fade-up">
+        <div class="secound-section mt-120">
+          <div class="our-finalize-section">
+            <div class="our-finalize-card" data-aos="fade-up">
               <div class="card-one">
                 <img alt="" src="./images/hat-1.png" style="margin-top:100px; width:100%" />
               </div>
             </div>
-            <div class="col-xl-5 offset-1" data-aos="fade-down">
+            <div class="our-finalize-card-1" data-aos="fade-down">
               <div>
                 <div class="titlecard">
                   <h1>Finalize & Personalize</h1>
@@ -301,12 +321,13 @@
                     style="background: linear-gradient(13.52deg, rgba(129, 181, 248, 0.1) 15.21%, #81B5F8 158.88%);">
                     <span class="count">8</span>
                     <div class="card-one text-end">
-                      <img alt="" src="./images/content.png" style="margin-top:0px" />
+                      <img alt="" src="./images/content.png" style="margin-top:0px; width:390;" />
                     </div>
-                    <div class="text-des">
-                      <h3>Upload Your Logo</h3>
-                      <p>This is where your design comes to life. Upload your brand’s logo and get a real-time preview
-                        of how it will look on the finished product.</p>
+                    <div class="text-des mt-p-80">
+                      <h3>Select a Quantity & Place Your Order</h3>
+                      <p>Our minimum order is 25 hats, making it easy to start. Ordering 50 or more? Enjoy exclusive
+                        volume pricing. The volume discounts will be displayed on the cart and checkout page. Once your
+                        design is finalized, confirm your selection and proceed to checkout.</p>
                     </div>
                   </div>
                 </div>
@@ -323,8 +344,7 @@
           </div>
           <div class="row justify-content-center mt-5">
 
-            <div class="col-md-5" data-aos="fade-down"
-            >
+            <div class="col-md-5" data-aos="fade-down">
               <div class="confirm-card d-flex gap-3">
                 <span class="count1">9</span>
                 <div style="flex:1">
@@ -332,21 +352,21 @@
                   <p>Once your order is placed, our team will get in touch with you to confirm the details before
                     production begins, ensuring everything is exactly as you envisioned.</p>
                   <img alt="" src="./images/con-text.png"
-                    style="border-radius: 20px 20px 0px 0px; margin-bottom: -30px;" />
+                    style="border-radius: 20px 20px 0px 0px; margin-bottom: -30px; margin-top: 30px;" />
                 </div>
               </div>
             </div>
-            <div class="col-md-5" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
+            <div class="col-md-5" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
               <div class="card-1" style="background: #F7F7F7">
                 <span class="count">10</span>
                 <div class="card-one ">
                   <img alt="" src="./images/conframe.png" style="margin-top:0px;" class="w-300" />
+                  <div class="bg-gradent"></div>
                 </div>
-                <div class="bg-gradent"></div>
+
                 <div class="text-des">
-                  <h3 style="font-size: 32px;">Payment & Production</h3>
-                  <p style="font-size: 22px; line-height: 32px;">To keep things simple, we offer flexible 30-day payment
+                  <h3>Payment & Production</h3>
+                  <p>To keep things simple, we offer flexible 30-day payment
                     terms via QuickBooks. Once payment is
                     processed, your custom hats go into production, crafted with precision and care.</p>
                 </div>
@@ -357,51 +377,53 @@
 
 
         <div class="line-svg">
-         
-          <svg id="scrollPath" width="100%" height="100%" viewBox="0 0 1869 4791" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_5008_875)">
-              <path  d="M1875 167L1391.5 167.344C1270.52 167.43 1172.5 265.524 1172.5 386.5V386.5" stroke="#F0F0F0"
-                stroke-width="26" stroke-linecap="round" />
-              <path
+
+          <svg id="scrollPath" width="100%" height="100%" viewBox="0 0 1869 4791" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path data-speed="1.3" d="M1875 167L1391.5 167.344C1270.52 167.43 1172.5 265.524 1172.5 386.5V386.5"
+                stroke="#F0F0F0" stroke-width="26" />
+              <path data-speed="1.3"
                 d="M1173 -12.5V479.5C1173 634.14 1047.64 759.5 893 759.5H351C199.674 759.5 77 882.174 77 1033.5V1033.5L77 3681C77 3835.64 202.36 3961 357 3961H664C818.64 3961 944 4086.36 944 4241V4791"
-                stroke="#F0F0F0" stroke-width="26" stroke-linecap="round" />
+                stroke="#F0F0F0" stroke-width="26" />
               <mask id="mask0_5008_875" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1514" y="55" width="449"
                 height="100%">
                 <rect x="1514" y="55" width="449" height="100%" fill="#D9D9D9" />
               </mask>
               <g>
-                <path d="M1875 167L1391.5 167.344C1270.52 167.43 1172.5 265.524 1172.5 386.5V386.5" stroke="#9BB8CB"
-                  stroke-width="26" stroke-linecap="round" />
+                <path data-speed="23" d="M1875 167L1391.5 167.344C1270.52 167.43 1172.5 265.524 1172.5 386.5V386.5"
+                  stroke="#9BB8CB" stroke-width="26" />
               </g>
               <mask id="mask1_5008_875" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1108" y="0" width="129"
-                height="490" stroke-linecap="round">
+                height="490">
                 <rect x="1108" width="129" height="100%" fill="#D9D9D9" />
               </mask>
               <g>
-                <path
+                <path data-speed="1.4"
                   d="M1173 -12.5V479.5C1173 634.14 1047.64 759.5 893 759.5H351C199.674 759.5 77 882.174 77 1033.5V1033.5L77 3681C77 3835.64 202.36 3961 357 3961H664C818.64 3961 944 4086.36 944 4241V4791"
-                  stroke="#9BB8CB" stroke-width="26" stroke-linecap="round" />
+                  stroke="#9BB8CB" stroke-width="26" />
               </g>
               <mask id="mask2_5008_875" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1562" y="55" width="401"
                 height="100%">
                 <rect x="1562.5" y="55.5" width="400" height="100%" fill="#D9D9D9" stroke="black" />
               </mask>
               <g>
-                <path class="dfg" data-speed="12" d="M1875 167L1391.5 167.344C1270.52 167.43 1172.5 265.524 1172.5 386.5V386.5" stroke="black"
-                  stroke-width="26" stroke-linecap="round" />
+                <path class="dfg" data-speed="22"
+                  d="M1875 167L1391.5 167.344C1270.52 167.43 1172.5 265.524 1172.5 386.5V386.5" stroke="black"
+                  stroke-width="26" />
               </g>
               <mask id="mask3_5008_875" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1108" y="0" width="129"
                 height="100%">
                 <rect x="1108.5" y="0.5" width="128" height="100%" fill="#D9D9D9" stroke="black" />
               </mask>
               <g>
-                <path
+                <path data-speed="1.3"
                   d="M1173 -12.5V479.5C1173 634.14 1047.64 759.5 893 759.5H351C199.674 759.5 77 882.174 77 1033.5V1033.5L77 3681C77 3835.64 202.36 3961 357 3961H664C818.64 3961 944 4086.36 944 4241V4791"
-                  stroke="black" stroke-width="26" stroke-linecap="round" />
+                  stroke="black" stroke-width="26" />
               </g>
 
             </g>
-           
+
           </svg>
 
         </div>
@@ -409,9 +431,8 @@
 
     </div>
   </div>
-  <footer data-aos="fade-up"
-  data-aos-anchor-placement="center-bottom">
-    <div class="container-xxl">
+  <footer data-aos="fade-up" data-aos-anchor-placement="center-bottom" style="padding:15px">
+    <div class="page-width">
       <div class="black-bg">
         <div class="row align-items-center">
           <div class="col-md-8">
@@ -512,96 +533,121 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1200 });
-          </script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200
+    });
+  </script>
 
-    <script>
-     
-     const animatedPaths = document.querySelectorAll('#scrollPath path[stroke="black"], #scrollPath path[stroke="#9BB8CB"]');
+  <script>
 
-animatedPaths.forEach(path => {
-  const length = path.getTotalLength();
-  path.style.strokeDasharray = length;
-  path.style.strokeDashoffset = length;
-});
+    const animatedPaths = document.querySelectorAll('#scrollPath path[stroke="black"], #scrollPath path[stroke="#9BB8CB"]');
+
+    animatedPaths.forEach(path => {
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const startOffset = 200; // Animation starts after scrolling 150px
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+
+      // Prevent animation from starting before 150px
+      const scrollPercent = Math.max(0, (scrollTop - startOffset) / (docHeight - startOffset));
+
+      animatedPaths.forEach(path => {
+        const length = path.getTotalLength();
+        const speed = parseFloat(path.dataset.speed) || 1.0;
+
+        let offset = length * (1 - scrollPercent * speed);
+        offset = Math.max(0, Math.min(length, offset));
+        path.style.strokeDashoffset = offset;
+      });
+    });
 
 
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = scrollTop / docHeight;
 
-  animatedPaths.forEach(path => {
-    const length = path.getTotalLength();
-    const speed = parseFloat(path.dataset.speed) || 1.3;
+    let rotation = 0;
 
-    let offset = length * (1 - scrollPercent * speed);
-    offset = Math.max(0, Math.min(length, offset));
-    path.style.strokeDashoffset = offset;
-  });
-});
+    // Rotate + add classes on click
+    function rotateOnce() {
+      rotation += 360;
+      document.getElementById("rotatable").style.transform = `rotate(${rotation}deg)`;
 
-let rotation = 0;
+      $(".left-banner-cap").addClass("top-left");
+      $(".right-banner-cap").addClass("top-right");
+    }
 
-// Rotate + add classes on click
-function rotateOnce() {
-  rotation += 360;
-  document.getElementById("rotatable").style.transform = `rotate(${rotation}deg)`;
+    // Remove classes on scroll down
+    let lastScrollY = window.scrollY;
 
-  $(".left-banner-cap").addClass("top-left");
-  $(".right-banner-cap").addClass("top-right");
-}
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
 
-// Remove classes on scroll down
-let lastScrollY = window.scrollY;
+      // If user scrolls down
+      if (currentScroll > lastScrollY) {
+        $(".left-banner-cap").removeClass("top-left");
+        $(".right-banner-cap").removeClass("top-right");
+      }
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-
-  // If user scrolls down
-  if (currentScroll > lastScrollY) {
-    $(".left-banner-cap").removeClass("top-left");
-    $(".right-banner-cap").removeClass("top-right");
-  }
-
-  lastScrollY = currentScroll;
-});
+      lastScrollY = currentScroll;
+    });
 
     const rotatable = document.getElementById("rotatable");
 
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
       const rotation = scrollY % 360;
-      rotatable.style.transform = `rotate(${rotation}deg)`;
+      //rotatable.style.transform = `rotate(${rotation}deg)`;
     });
-    
+
     // button color change
 
     window.addEventListener('scroll', () => {
-    const btn = document.querySelector('.btn-rotate');
-    const banner = document.querySelector('.banner-section');
+      //const btn = document.querySelector('.btn-rotate');
+      const banner = document.querySelector('.banner-section');
 
-    if (!btn || !banner) return; // Safety check
+      if (!banner) return; // Safety check
 
-    const scrolled = window.scrollY > 10;
+      const scrolled = window.scrollY > 10;
 
-    if (scrolled) {
-      btn.classList.add('scrolled');
-      banner.classList.add('banner-scrolled');
-    } else {
-      btn.classList.remove('scrolled');
-      banner.classList.remove('banner-scrolled');
-    }
-  });
-  
+      if (scrolled) {
+        //btn.classList.add('scrolled');
+        banner.classList.add('banner-scrolled');
+      } else {
+        //btn.classList.remove('scrolled');
+        banner.classList.remove('banner-scrolled');
+      }
+    });
 
-    </script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            } else {
+              entry.target.classList.remove("in-view");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
-    
+      document.querySelectorAll(".zoom-on-scroll").forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+
+  </script>
+
+
+
 </body>
 
 </html>
