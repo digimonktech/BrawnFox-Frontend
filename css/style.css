@@ -5,7 +5,7 @@ body {
   background: #f7f7f7;
 }
 .page-width {
-  max-width: 160rem;
+  max-width: 1440px;
   margin: auto;
 }
 .main-section {
@@ -183,7 +183,7 @@ span.dot {
   border-radius: 40px;
 }
 .content-section {
-  padding:0px 15px 15px;
+  padding: 0px 15px 15px;
 }
 .line-svg {
   position: absolute;
@@ -217,14 +217,17 @@ span.dot {
   color: #9bb8cb;
 }
 .content-text {
-  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-  color: #000000B2;
+  line-height: normal;
+  letter-spacing: -0.24px;
 }
 
 .card-tast {
-  padding-left: 5%;
+  padding-left: 8%;
   padding-top: 0%;
 }
 img {
@@ -233,12 +236,14 @@ img {
 .hat {
   padding-top: 30%;
 }
-.botttom-h-150{margin-bottom: -150px;}
+.botttom-h-150 {
+  margin-bottom: -150px;
+}
 .hat img {
   margin-left: -55px;
 }
 .secound-section {
-  padding-left: 4vw;
+  padding-left: 6vw;
 
   position: relative;
   z-index: 100;
@@ -248,10 +253,9 @@ img {
 
 .titlecard h1 {
   font-weight: 600;
-  font-size: 56px;
-  line-height: 52px;
+  font-size: 64px;
+  line-height: 72px;
   color: #000000;
-
 }
 .card-1 {
   background: linear-gradient(
@@ -261,16 +265,15 @@ img {
   );
   border-radius: 32px;
   position: relative;
-  
 }
 
 .cardbox-details {
-  padding-top: 30px;
+  padding-top: 70px;
 }
 
 .card-one img {
   margin-top: -30px;
-  width:322px;
+  width: 250px;
   display: inline-block;
 }
 
@@ -297,19 +300,26 @@ img {
 }
 
 .text-des h3 {
-  font-size:22px;
+  color: #000;
+  font-size: 23px;
+  font-style: normal;
   font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.32px;
 }
 
 .text-des p {
-  font-size:16px;
-  line-height:24px;
+  color: rgba(0, 0, 0, 0.80);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 400;
-  color: #000000cc;
+  line-height: normal;
+  letter-spacing: -0.22px;
   margin: 0;
 }
 .mt-100 {
-  margin-top: 70px;
+  margin-top: 100px;
 }
 .mt-200 {
   margin-top: 200px;
@@ -584,7 +594,7 @@ footer {
 }
 .design-story {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .our-design-card {
@@ -620,7 +630,7 @@ footer {
   width: 33%;
   max-width: 504px;
 }
-.mt-58{
+.mt-58 {
   margin-top: -58px;
 }
 .our-finalize-section {
@@ -640,21 +650,21 @@ footer {
 .mt-p-80 {
   margin-top: -80px;
 }
-.mt-120{
-  margin-top: 120px;
+.mt-120 {
+  margin-top: 150px;
 }
-.hatcap{
+.hatcap {
   width: 507.806px;
-    max-width: max-content;
+  max-width: max-content;
 }
 .cricle {
-  width: 332px;
-  height: 336px;
+  width: 270px;
+  height: 270px;
   transform: rotate(30deg);
   position: absolute;
   border-radius: 999999px;
-  border: 1px solid #FFF;
-  background: linear-gradient(167deg, rgba(255, 255, 255, 0.00) 33.9%, #FFF 90.42%);
+  border: 1px solid #fff;
+  background: linear-gradient(167deg, rgba(255, 255, 255, 0) 33.9%, #fff 90.42%);
   right: -2px;
-  top: -93px;
+  top: -85px;
 }
