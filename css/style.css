@@ -5,7 +5,7 @@ body {
   background: #f7f7f7;
 }
 .page-width {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: auto;
 }
 .main-section {
@@ -100,7 +100,7 @@ span.dot {
 
 .banner h1 {
   font-size: 6vw;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   line-height: 96px;
   opacity: 0.3;
@@ -190,6 +190,7 @@ span.dot {
   top: 0px;
   right: 0;
   left: 0px;
+  height:80%;
 }
 
 .content-card {
@@ -209,7 +210,7 @@ span.dot {
 
 .card-tast h1 {
   font-size: 64px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 72px;
 }
 
@@ -219,11 +220,11 @@ span.dot {
 .content-text {
   color: rgba(0, 0, 0, 0.7);
   font-family: Inter;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: -0.24px;
+  letter-spacing: normal;
 }
 
 .card-tast {
@@ -252,8 +253,8 @@ img {
 }
 
 .titlecard h1 {
-  font-weight: 600;
-  font-size: 64px;
+  font-weight: 400;
+  font-size: 52px;
   line-height: 72px;
   color: #000000;
   font-family: 'Inter Display', sans-serif;
@@ -304,7 +305,7 @@ img {
   color: #000;
   font-size: 22px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: -0.32px;
   font-family: 'Inter Display', sans-serif;
@@ -317,7 +318,7 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: -0.22px;
+  letter-spacing: normal;
   margin: 0;
 }
 .mt-100 {
@@ -352,7 +353,7 @@ img {
 .confirm-card h2 {
   font-size: 22px;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
   font-family: 'Inter Display', sans-serif;
 }
 
@@ -455,7 +456,7 @@ footer {
 }
 .footer-menu h3 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   color: #fff;
 }
 
