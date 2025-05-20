@@ -250,12 +250,11 @@ img {
   margin-left: -55px;
 }
 .secound-section {
-  padding-left: 6vw;
+  margin-left: 6vw;
 
   position: relative;
   z-index: 100;
   display: table;
-  width: 100%;
 }
 
 .titlecard h1 {
@@ -320,7 +319,7 @@ img {
 .text-des p {
   color: rgba(0, 0, 0, 0.80);
   font-family: Inter;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
