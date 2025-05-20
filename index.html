@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html >
 
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,11 +20,11 @@
 
 </head>
 
-<body>
+<body >
 
   <div class="main-section">
     <div class="page-width">
-      <div class="banner-section">
+      <div class="banner-section" id="heroBanner">
         <div class="navbar-section">
           <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
             <div class="container-fluid">
@@ -67,7 +67,10 @@
             </div>
           </nav>
         </div>
-        <div class="banner">
+        <div class="banner" >
+
+          <img src="https://digimonktech.com/brawnfox/html/images/hat-1.png" class="cap-image-left" alt="cap left">
+         <img src="https://digimonktech.com/brawnfox/html/images/hat.png" class="cap-image-right" alt="cap right">
           <!-- <button class="btn-rotate">
 
             <div class="rotate-wrapper" onclick="rotateOnce()">
@@ -108,15 +111,15 @@
               xmlns="http://www.w3.org/2000/svg">
               <path d="M2 15.25L9 8.25L2 1.25" stroke="white" stroke-width="1.5" stroke-linecap="square" />
             </svg></button>
-
+ 
           <div class="banner-shadow">
             <img src="./images/hat-3.png" />
           </div>
           <div class="banner-shadow-right">
             <img src="./images/hat-4.png" />
           </div>
-          <img src="./images/hat-1.png" alt="" class="left-banner-cap" />
-          <img src="./images/hat.png" alt="" class="right-banner-cap" />
+          <!-- <img src="./images/hat-1.png" alt="" class="left-banner-cap" />
+          <img src="./images/hat.png" alt="" class="right-banner-cap" /> -->
 
 
         </div>
@@ -533,7 +536,7 @@
 
   <script>
 
-    const animatedPaths = document.querySelectorAll('#scrollPath path[stroke="black"], #scrollPath path[stroke="#9BB8CB"]');
+const animatedPaths = document.querySelectorAll('#scrollPath path[stroke="black"], #scrollPath path[stroke="#9BB8CB"]');
 
     animatedPaths.forEach(path => {
       const length = path.getTotalLength();
@@ -543,7 +546,7 @@
 
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
-      const startOffset = 200; // Animation starts after scrolling 150px
+      const startOffset = 600; // Animation starts after scrolling 150px
       const docHeight = document.body.scrollHeight - window.innerHeight;
 
       // Prevent animation from starting before 150px
@@ -633,7 +636,66 @@
       });
     });
 
+const leftCap = document.querySelector('.left-banner-cap');
 
+if (leftCap) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(leftCap);
+}
+
+
+// Hero banner hold until 500px scroll
+function startDesigning() {
+  document.querySelector("section").scrollIntoView({ behavior: "smooth" });
+}
+
+window.addEventListener('scroll', function () {
+  const scrollY = window.scrollY;
+  const maxScroll = 900;
+
+  const capLeft = document.querySelector('.cap-image-left');
+  const capRight = document.querySelector('.cap-image-right');
+  const heroBanner = document.getElementById('heroBanner');
+
+  // Toggle fixed/static class
+  if (scrollY >= maxScroll) {
+   setTimeout( heroBanner.classList.remove('banner-scrolled'), 1500);
+
+    // Reset transform with smooth transition
+    capLeft.style.transform = `translateY(0px) rotate(0deg)`;
+    capRight.style.transform = `translateY(0px)`;
+
+    capLeft.style.transition = `transform 0.6s ease-in`;
+    capRight.style.transition = `transform 0.6s ease-in`;
+   // capLeft.style.peddingTop = "1100px";
+    //capRight.style.opacity = `0`
+  } else {
+    // Animate based on scroll
+    const translateY = Math.min(scrollY, maxScroll);
+    const rotation = -Math.min(scrollY / maxScroll * 30, 30);
+
+    capLeft.style.transform = `translateY(-${translateY}px) rotate(${rotation}deg)`;
+    capRight.style.transform = `translateY(-${translateY}px)`;
+
+    capLeft.style.transition = `none`;
+    capRight.style.transition = `none`;
+
+    heroBanner.classList.add('static');
+  }
+});
+
+
+
+
+
+   
   </script>
 
 
