@@ -116,7 +116,7 @@
             <img src="./images/hat-3.png" />
           </div>
           <div class="banner-shadow-right">
-            <img src="./images/hat-4.png" />
+            <img src="./images/bannerright.png" />
           </div>
           <!-- <img src="./images/hat-1.png" alt="" class="left-banner-cap" />
           <img src="./images/hat.png" alt="" class="right-banner-cap" /> -->
@@ -147,7 +147,8 @@
             </div>
             <div class="cap-1">
               <div class="hat">
-                <img alt="Hat image" src="./images/hat-new-2.png" class="hatcap" />
+                <!-- <img alt="Hat image" src="./images/first.png" class="hatcap" /> -->
+                   <img alt="Hat image" src="./images/hat22.png" class="hatcap" />
               </div>
             </div>
           </div>
@@ -155,13 +156,13 @@
 
 
 
-        <div class="secound-section ">
+        <div class="secound-section " id="shrink">
           <div class="titlecard">
             <h1 data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              Design Your Hat Basics
+              Design Your <br/> Hat Basics
             </h1>
 
-            <div class="content-text" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="content-text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" id="hatss">
               Create the foundation of your design by selecting the core elements of your hat—from the crown color to
               the rope style and backstrap. These features define the base look and feel of your custom piece.
             </div>
@@ -173,7 +174,7 @@
                     <div class="card-one">
                       <img alt="" src="./images/cap-1.png" />
                     </div>
-                    <div class="text-des">
+                    <div class="text-des" >
                       <h3>Choose a Crown Color</h3>
                       <p>The foundation of your hat starts with the crown color. Whether you're after a refined neutral,
                         a bold statement, or something in between, our carefully curated selection of shades ensures
@@ -215,7 +216,7 @@
         </div>
         <div class="secound-section mt-100">
           <div class="titlecard" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-            <h1>Customize Your Patch</h1>
+            <h1>Customize <br/> Your Patch</h1>
 
             <div class="content-text">Now it’s time to tailor your patch. Choose a material, define its shape, and
               fine-tune the colors that will frame your logo. These elements ensure your branding is clear, distinctive,
@@ -331,7 +332,7 @@
           <div class="titlecard w-5px m-auto text-center" data-aos="fade-up">
             <h1>Confirm & Produce</h1>
 
-            <div class="content-text">We review every detail before production begins. Once confirmed, your order moves
+            <div class="content-text produce">We review every detail before production begins. Once confirmed, your order moves
               into production and payment is handled securely through QuickBooks—with flexible terms for your
               convenience.</div>
           </div>
@@ -544,23 +545,26 @@ const animatedPaths = document.querySelectorAll('#scrollPath path[stroke="black"
       path.style.strokeDashoffset = length;
     });
 
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const startOffset = 600; // Animation starts after scrolling 150px
-      const docHeight = document.body.scrollHeight - window.innerHeight;
+   window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const startOffset = 800; // base offset
+  const docHeight = document.body.scrollHeight - window.innerHeight;
 
-      // Prevent animation from starting before 150px
-      const scrollPercent = Math.max(0, (scrollTop - startOffset) / (docHeight - startOffset));
+  animatedPaths.forEach(path => {
+    const length = path.getTotalLength();
+    const speed = parseFloat(path.dataset.speed) || 1.0;
 
-      animatedPaths.forEach(path => {
-        const length = path.getTotalLength();
-        const speed = parseFloat(path.dataset.speed) || 1.0;
+    // Add 20px delay if path stroke is #9BB8CB
+    const extraOffset = path.getAttribute('stroke') === '#9BB8CB' ? 0 : 20;
 
-        let offset = length * (1 - scrollPercent * speed);
-        offset = Math.max(0, Math.min(length, offset));
-        path.style.strokeDashoffset = offset;
-      });
-    });
+    // Adjusted scroll percent
+    const scrollPercent = Math.max(0, (scrollTop - (startOffset + extraOffset)) / (docHeight - (startOffset + extraOffset)));
+
+    let offset = length * (1 - scrollPercent * speed);
+    offset = Math.max(0, Math.min(length, offset));
+    path.style.strokeDashoffset = offset;
+  });
+});
 
 
 
@@ -651,54 +655,222 @@ if (leftCap) {
 }
 
 
-// Hero banner hold until 500px scroll
+// function startDesigning() {
+//   document.querySelector("section").scrollIntoView({ behavior: "smooth" });
+// }
+
+// window.addEventListener('scroll', function () {
+//   const scrollY = window.scrollY;
+//   const maxScroll = 1100;
+
+//   const capLeft = document.querySelector('.cap-image-left');
+//   const capRight = document.querySelector('.cap-image-right');
+//   const heroBanner = document.getElementById('heroBanner');
+
+//   // Toggle fixed/static class
+//   if (scrollY >= maxScroll) {
+//    setTimeout( heroBanner.classList.remove('banner-scrolled'), 1500);
+
+//     // Reset transform with smooth transition
+//     capLeft.style.transform = `translateY(0px) rotate(0deg)`;
+//     capRight.style.transform = `translateY(0px)`;
+
+//     capLeft.style.transition = `transform 0.6s ease-in`;
+//     capRight.style.transition = `transform 0.6s ease-in`;
+//    // capLeft.style.peddingTop = "1100px";
+//     //capRight.style.opacity = `0`
+//   } else {
+//     // Animate based on scroll
+//     const translateY = Math.min(scrollY, maxScroll);
+//     const rotation = -Math.min(scrollY / maxScroll * 30, 30);
+
+//     capLeft.style.transform = `translateY(-${translateY}px) rotate(${rotation}deg)`;
+//     capRight.style.transform = `translateY(-${translateY}px)`;
+
+//     capLeft.style.transition = `none`;
+//     capRight.style.transition = `none`;
+
+//     heroBanner.classList.add('static');
+//   }
+// });
+
+
+// function startDesigning() {
+//   document.querySelector("section").scrollIntoView({ behavior: "smooth" });
+// }
+
+// window.addEventListener('scroll', function () {
+//   const scrollY = window.scrollY;
+//   const minScroll = 0;      // Scroll start par hi classes chahiye
+//   const animateStart = 400; // Jab scroll 400px se upar ho toh animated add karna
+//   const maxScroll = 900;
+
+//   const capLeft = document.querySelector('.cap-image-left');
+//   const capRight = document.querySelector('.cap-image-right');
+//   const heroBanner = document.getElementById('heroBanner');
+
+//   // Scroll start hone par static aur banner-scrolled add kar do
+//   if (scrollY >= minScroll) {
+//     if (!heroBanner.classList.contains('banner-scrolled')) {
+//       heroBanner.classList.add('banner-scrolled');
+//     }
+//     if (!heroBanner.classList.contains('static')) {
+//       heroBanner.classList.add('static');
+//     }
+//   } else {
+//     heroBanner.classList.remove('banner-scrolled');
+//     heroBanner.classList.remove('static');
+//   }
+
+//   // Jab scroll 400px se upar ho, animated add karo
+//   if (scrollY >= animateStart && scrollY < maxScroll) {
+//     if (!heroBanner.classList.contains('animated')) {
+//       heroBanner.classList.add('animated');
+//     }
+//   } else {
+//     // Scroll 400 ke neeche ya 1100 ke upar animated hata do
+//     if (heroBanner.classList.contains('animated')) {
+//       heroBanner.classList.remove('animated');
+//     }
+//   }
+
+//   if (scrollY >= maxScroll) {
+//     // Reset transforms aur smooth transition lagao
+//     capLeft.style.transform = `translateY(0px) rotate(0deg)`;
+//     capRight.style.transform = `translateY(0px)`;
+
+//     capLeft.style.transition = `transform 0.6s ease-in`;
+//     capRight.style.transition = `transform 0.6s ease-in`;
+
+//     // Banner-scrolled ko 1.5 sec baad remove karo
+//     setTimeout(() => {
+//       heroBanner.classList.remove('banner-scrolled');
+//       heroBanner.classList.remove('static');
+//     }, 1500);
+
+//   } else {
+//     // Scroll ke hisaab se animation do jaise pehle
+//     const translateY = Math.min(scrollY, maxScroll);
+//     const rotation = -Math.min((scrollY / maxScroll) * 30, 30);
+
+//     capLeft.style.transform = `translateY(-${translateY}px) rotate(${rotation}deg)`;
+//     capRight.style.transform = `translateY(-${translateY}px)`;
+
+//     capLeft.style.transition = `none`;
+//     capRight.style.transition = `none`;
+//   }
+// });
+
+
 function startDesigning() {
   document.querySelector("section").scrollIntoView({ behavior: "smooth" });
 }
 
 window.addEventListener('scroll', function () {
   const scrollY = window.scrollY;
-  const maxScroll = 900;
+  const animateStart = 400; // Jab scroll 400px se upar ho toh animated add karna
+  const maxScroll = 1100;
 
   const capLeft = document.querySelector('.cap-image-left');
   const capRight = document.querySelector('.cap-image-right');
   const heroBanner = document.getElementById('heroBanner');
 
-  // Toggle fixed/static class
-  if (scrollY >= maxScroll) {
-   setTimeout( heroBanner.classList.remove('banner-scrolled'), 1500);
+  // --- Scroll top par sari classes hata do ---
+  if (scrollY === 0) {
+    heroBanner.classList.remove('banner-scrolled');
+    heroBanner.classList.remove('static');
+    heroBanner.classList.remove('animated');
+  } else {
+    // Scroll start hone par static aur banner-scrolled add kar do
+    if (!heroBanner.classList.contains('banner-scrolled')) {
+      heroBanner.classList.add('banner-scrolled');
+    }
+    if (!heroBanner.classList.contains('static')) {
+      heroBanner.classList.add('static');
+    }
+  }
 
-    // Reset transform with smooth transition
+  // Jab scroll 400px se upar ho, animated add karo
+  if (scrollY >= animateStart && scrollY < maxScroll) {
+    if (!heroBanner.classList.contains('animated')) {
+      heroBanner.classList.add('animated');
+    }
+  } else {
+    if (heroBanner.classList.contains('animated')) {
+      heroBanner.classList.remove('animated');
+    }
+  }
+
+  if (scrollY >= maxScroll) {
+    // Reset transforms aur smooth transition lagao
     capLeft.style.transform = `translateY(0px) rotate(0deg)`;
     capRight.style.transform = `translateY(0px)`;
 
     capLeft.style.transition = `transform 0.6s ease-in`;
     capRight.style.transition = `transform 0.6s ease-in`;
-   // capLeft.style.peddingTop = "1100px";
-    //capRight.style.opacity = `0`
+
+    // Banner-scrolled ko 1.5 sec baad remove karo
+    setTimeout(() => {
+      heroBanner.classList.remove('banner-scrolled');
+      heroBanner.classList.remove('static');
+    }, 1500);
+
   } else {
-    // Animate based on scroll
+    // Scroll ke hisaab se animation do jaise pehle
     const translateY = Math.min(scrollY, maxScroll);
-    const rotation = -Math.min(scrollY / maxScroll * 30, 30);
+    const rotation = -Math.min((scrollY / maxScroll) * 30, 30);
 
     capLeft.style.transform = `translateY(-${translateY}px) rotate(${rotation}deg)`;
     capRight.style.transform = `translateY(-${translateY}px)`;
 
     capLeft.style.transition = `none`;
     capRight.style.transition = `none`;
-
-    heroBanner.classList.add('static');
   }
 });
-
-
-
 
 
    
   </script>
 
 
+<script>
+  let imageHasEntered = false;
+
+  window.addEventListener('scroll', function () {
+    const hatImage = document.querySelector('.hatcap');
+    const targetShrink = document.getElementById('shrink');
+    const targetRotate = document.getElementById('hatss');
+    const imageRect = hatImage?.getBoundingClientRect();
+
+    if (!hatImage || !targetShrink || !targetRotate || !imageRect) return;
+
+    // 1. Check if image has entered the viewport at least once
+    const imageInView = imageRect.top >= 0 && imageRect.bottom <= window.innerHeight;
+    if (imageInView) {
+      imageHasEntered = true;
+    }
+
+    // 2. Shrink when #shrink is in viewport (only after image has been seen)
+    const shrinkRect = targetShrink.getBoundingClientRect();
+    const shrinkInView = shrinkRect.top <= window.innerHeight && shrinkRect.bottom >= 0;
+
+    if (imageHasEntered && shrinkInView) {
+      hatImage.classList.add('shrink');
+    } else {
+      hatImage.classList.remove('shrink');
+    }
+
+    // 3. Rotate when #hatss is in viewport
+    const rotateRect = targetRotate.getBoundingClientRect();
+    const rotateInView = rotateRect.top <= window.innerHeight && rotateRect.bottom >= 0;
+
+    if (rotateInView) {
+      hatImage.classList.add('rotate');
+    } else {
+      hatImage.classList.remove('rotate');
+    }
+  });
+</script>
 
 </body>
 

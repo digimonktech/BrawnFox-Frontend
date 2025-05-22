@@ -3,7 +3,121 @@ body {
   font-size: 16px;
   color: #000;
   background: #f7f7f7;
+  overflow-x: hidden !important;
 }
+.content-text.produce {
+    color: rgba(0, 0, 0, 0.70) !important;
+    text-align: center !important;
+    font-family: Inter;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+    letter-spacing: -0.24px !important;
+    width: 610px !important;
+    margin: 0 auto !important;
+}
+.hatcap {
+  transition: all 0.5s ease;
+  width: 100%;
+}
+.animated {
+    background: linear-gradient(280.13deg, #9BB8CB 45.59%, #E8E8E8 126.63%) !important;
+}
+.hatcap.shrink {
+    width: 500px;
+}
+img.hatcap.shrink.rotate {
+    transform: rotate(-17.765deg);
+    flex-shrink: 0;
+    aspect-ratio: 855.81 / 617.06;
+    filter: blur(0px);
+    width: 599px;
+    height: 630px;
+    object-fit: cover;
+    right: -100px;
+}
+.hatcap.rotate {
+  animation: rotateAnim 1s ease-in-out forwards;
+}
+
+/*@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+
+@media screen and (max-width: 1440px) and (min-width: 1280px) {
+    .secound-section {
+        width: 92% !important;
+        margin: 100px auto 0 96px !important;
+    }
+    
+    .banner {
+        padding-top: 298px !important;
+    }
+    .cap-image-left, .cap-image-right {
+    position: absolute;
+    top: 100%;
+    width: 604px;
+    z-index: 1;
+    transition: transform 0.2s ease-out;
+}
+    .card-tast {
+    padding-left: 9% !important;
+    padding-top: 7% !important; 
+    width: 690px !important;
+}
+    .line-svg {
+      width: 100% !important;
+      height: 82% !important;
+    }
+    .banner p {
+    font-size: 20px !important;
+    margin-top: 10px;
+    opacity: 0.3;
+    z-index: 10;
+    position: relative;
+    letter-spacing: -0.24px;
+    font-family: 'Montserrat' !important;
+}
+.banner-shadow {
+    position: absolute;
+    left: -26px !important;
+    bottom: -94px !important;
+}
+
+.banner-shadow img {
+    width: 500px !important;
+    object-fit: contain !important;
+}
+.banner-section.banner-scrolled .banner {
+    transform: translateY(-150px) !important;
+}
+.btn-start {
+  bottom: -68px !important;
+}
+.banner-shadow-right img {
+    width: 400px;
+    object-fit: contain;
+}
+.banner-shadow-right {
+    position: absolute;
+    right: -10px !important;
+    bottom: -68px !important;
+}
+.banner-section {
+  height: 600px !important;
+}
+.cap-image-right {
+    right: 0% !important;
+    top: 498px !important;
+}
+}
+
 .page-width {
   max-width: 1920px;
   margin: auto;
@@ -105,13 +219,16 @@ span.dot {
 }
 
 .banner h1 {
-  font-size: 6vw;
-  font-weight: 400;
-  text-align: center;
-  line-height: 96px;
   opacity: 0.3;
   z-index: 10;
   position: relative;
+  text-align: center;
+font-family: Montserrat;
+font-size: 80px;
+font-style: normal;
+font-weight: 600;
+line-height: 80px; /* 100% */
+letter-spacing: -0.96px;
 }
 
 .banner p {
@@ -122,7 +239,8 @@ span.dot {
   position: relative;
 }
 .banner-section.banner-scrolled {
-  background: linear-gradient(187.09deg, #9bb8cb -0.2%, #e8e8e8 115.65%);
+      background: linear-gradient(242.41deg, #9BB8CB -12.48%, #E8E8E8 67.16%);
+/*  background: linear-gradient(187.09deg, #9bb8cb -0.2%, #e8e8e8 115.65%);*/
   transition: background 0.3s ease;
  /*  padding-bottom: 10%; */
 }
@@ -215,9 +333,13 @@ span.dot {
 }
 
 .card-tast h1 {
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 72px;
+    color: #000;
+    font-family: 'Inter';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 68px;
+    letter-spacing: -1.92px;
 }
 
 .card-tast .your-test {
@@ -241,7 +363,8 @@ img {
   max-width: 100%;
 }
 .hat {
-  padding-top: 30%;
+    padding-top: 30%;
+    height: 743px;
 }
 .botttom-h-150 {
   margin-bottom: -150px;
@@ -258,11 +381,12 @@ img {
 }
 
 .titlecard h1 {
-  font-weight: 400;
-  font-size: 52px;
-  line-height: 72px;
-  color: #000000;
-  font-family: 'Inter Display', sans-serif;
+    color: #000;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 68px;
+    letter-spacing: -1.92px;
 }
 .card-1 {
   background: linear-gradient(
@@ -289,18 +413,19 @@ img {
   position: relative;
 }
 .count {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  background: #00000033;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  color: #fff;
-  font-size: 20px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    display: flex;
+    width: 52px;
+    height: 52px;
+    padding: 17px 22px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 999999px;
+    background: rgba(36, 36, 36, 0.12);
 }
 .text-des {
   padding: 15px;
@@ -308,23 +433,22 @@ img {
 
 .text-des h3 {
   color: #000;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.32px;
-  font-family: 'Inter Display', sans-serif;
+font-size: 22px;
+font-style: normal;
+font-weight: 550;
+line-height: normal;
+letter-spacing: -0.32px;
 }
 
 .text-des p {
-  color: rgba(0, 0, 0, 0.80);
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: normal;
-  margin: 0;
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.22px;
+    margin: 0;
 }
 .mt-100 {
   margin-top: 100px;
@@ -356,17 +480,23 @@ img {
   border-radius: 100%;
 }
 .confirm-card h2 {
-  font-size: 22px;
-  color: #fff;
-  font-weight: 400;
-  font-family: 'Inter Display', sans-serif;
+color: #FFF;
+font-family: "Inter";
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.32px;
 }
 
 .confirm-card p {
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
-  line-height: 24px;
+color: rgba(255, 255, 255, 0.80);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.22px;
 }
 .w-300 {
   width: 350px !important;
@@ -486,7 +616,8 @@ footer {
 #line-svg path {
   stroke-dasharray: 10000; /* This should be the length of the path */
   stroke-dashoffset: 10000;
-  transition: stroke-dashoffset 0.3s ease-out;
+  transition: stroke-dashoffset 0.2s ease-out;
+/*  transition: stroke-dashoffset 0.3s ease-out;*/
 }
 .scroll-rotate {
   transition: transform 0.1s linear;
@@ -666,10 +797,16 @@ footer {
   margin-top: 150px;
 }
 .hatcap {
+    width: 650px;
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+/*.hatcap {
   width: 507.806px;
   max-width: max-content;
 
-}
+}*/
 .cricle {
   width: 270px;
   height: 270px;
@@ -704,7 +841,7 @@ footer {
       position: absolute;
       
       top: 100%;
-      width: 450px;
+      width: 604px;
       z-index: 1;
       transition: transform 0.2s ease-out;
     }
