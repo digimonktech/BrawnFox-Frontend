@@ -216,7 +216,7 @@
           </div>
 
         </div>
-        <div class="secound-section mt-100">
+        <div class="secound-section mt-100 patch">
           <div class="titlecard" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <h1>Customize Your Patch</h1>
 
@@ -259,7 +259,7 @@
             </div>
           </div>
         </div>
-        <div class="secound-section mt-100">
+        <div class="secound-section mt-100 patch2">
           <div class="titlecard" data-aos="fade-top">
             <h1>Your Brand, Your Hat</h1>
 
@@ -300,8 +300,8 @@
         <div class="secound-section mt-120">
           <div class="our-finalize-section">
             <div class="our-finalize-card" data-aos="fade-up">
-              <div class="card-one">
-                <img alt="" src="./images/hat-1.png" style="margin-top:250px; width:100%" />
+              <div class="card-one animations">
+                <img alt="" src="./images/hat-1.png" style=" width:100%" />
               </div>
             </div>
             <div class="our-finalize-card-1" data-aos="fade-down">
@@ -330,7 +330,7 @@
             </div>
           </div>
         </div>
-        <div class="secound-section mt-100 tops" style="margin-top: 10px !important;">
+        <div class="secound-section mt-100 tops">
           <div class="titlecard w-5px m-auto text-center" data-aos="fade-up">
             <h1>Confirm & Produce</h1>
 
@@ -541,25 +541,32 @@
 
 const animatedPaths = document.querySelectorAll('#scrollPath path[stroke="black"], #scrollPath path[stroke="#9BB8CB"]');
 
-    animatedPaths.forEach(path => {
-      const length = path.getTotalLength();
-      path.style.strokeDasharray = length;
-      path.style.strokeDashoffset = length;
-    });
+animatedPaths.forEach(path => {
+  const length = path.getTotalLength();
+  path.style.strokeDasharray = length;
+  path.style.strokeDashoffset = length;
+});
 
-   window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
-  const startOffset = 800; // base offset
   const docHeight = document.body.scrollHeight - window.innerHeight;
+
+  // Set startOffset based on window width
+  let startOffset = 800; // default
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth >= 1440 && screenWidth <= 1899) {
+    startOffset = 800;
+  } else if (screenWidth >= 1920) {
+    startOffset = 1100;
+  }
 
   animatedPaths.forEach(path => {
     const length = path.getTotalLength();
     const speed = parseFloat(path.dataset.speed) || 1.0;
 
-    // Add 20px delay if path stroke is #9BB8CB
     const extraOffset = path.getAttribute('stroke') === '#9BB8CB' ? 0 : 20;
 
-    // Adjusted scroll percent
     const scrollPercent = Math.max(0, (scrollTop - (startOffset + extraOffset)) / (docHeight - (startOffset + extraOffset)));
 
     let offset = length * (1 - scrollPercent * speed);
